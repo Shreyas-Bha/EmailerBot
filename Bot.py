@@ -13,8 +13,10 @@ from email.mime.multipart import MIMEMultipart
 import imaplib
 import email
 import json
+from tzlocal import get_localzone
 
 port = 465
+local_tz = str(get_localzone())
 with open('input_info.txt', 'r') as file:
   for index, line in enumerate(file):
     if index == 0:
@@ -62,11 +64,11 @@ while True:
               for response_part in data2:
                   message = email.message_from_bytes(response_part[1])
                   yesterday = date.today() - timedelta(days=1)
-                  yesterday_datetime = datetime(yesterday.year, yesterday.month, yesterday.day, tzinfo=pytz.timezone('US/Eastern'))
+                  yesterday_datetime = datetime(yesterday.year, yesterday.month, yesterday.day, tzinfo=pytz.timezone(local_tz))
                   splitted_date = message['Date'].split(' ')
                   splitted_time = message['Date'].split(':')
                   month = 1 if splitted_date[2] == 'Jan' else 2 if splitted_date[2] == 'Feb' else 3 if splitted_date[2] == 'Mar' else 4 if splitted_date[2] == 'Apr' else 5 if splitted_date[2] == 'May' else 6 if splitted_date[2] == 'Jun' else 7 if splitted_date[2] == 'Jul' else 8 if splitted_date[2] == 'Aug' else 9 if splitted_date[2] == 'Sept' else 10 if splitted_date[2] == 'Oct' else 11 if splitted_date[2] == 'Nov' else 12
-                  msg_date = datetime(int(splitted_date[3]), month, int(splitted_date[1]), int(splitted_time[0][len(splitted_time[0]) - 2:len(splitted_time[0])]), int(splitted_time[1]), tzinfo=pytz.UTC).astimezone(pytz.timezone('US/Eastern'))
+                  msg_date = datetime(int(splitted_date[3]), month, int(splitted_date[1]), int(splitted_time[0][len(splitted_time[0]) - 2:len(splitted_time[0])]), int(splitted_time[1]), tzinfo=pytz.UTC).astimezone(pytz.timezone(local_tz))
                   if msg_date < yesterday_datetime:
                       if reminder == '':
                           mail_content = 'No new reminders'
@@ -169,5 +171,5 @@ while True:
           server.sendmail(bot_email, my_email, msg.as_string())
           sent = True
           print('email sent')
-    elif not (datet.minute == 30) and sent:
+    elif not (datet.minute == send_minute) and sent:
         sent = False
