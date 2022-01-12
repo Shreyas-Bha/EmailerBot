@@ -12,3 +12,7 @@ capital) in the message also.
 To remove a birthday:
 Email the bot a message. Start it with cmd, and include the words "remove" and "birthday" somwhere in the message. Type the date (day/month with no leading 0s) and the name of the person (with the first letter being
 capital) in the message also.
+
+What this bot does:
+Reminds you of birthdays and other things you tell it to
+Tells you the weather and date
