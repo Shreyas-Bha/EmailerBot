@@ -7,15 +7,15 @@ Instructions:
 
 Details on the information needed:
 
-your_email is the email that the bot will send emails to
+-your_email is the email that the bot will send emails to
 
-bot_email is the email of the bot account
+-bot_email is the email of the bot account
 
-bot_password is the email of the bot account
+-bot_password is the email of the bot account
 
-zip_code is your 5 digit zip code
+-zip_code is your 5 digit zip code
 
-send_time is the time you want emails to be sent
+-send_time is the time you want emails to be sent
 
 <br>
 Bot commands:
@@ -31,5 +31,5 @@ Email the bot a message. Start it with cmd, and include the words "remove" and "
 capital) in the message also.
 
 What this bot does:
-Reminds you of birthdays and other things you tell it to
-Tells you the weather and date
+-Reminds you of birthdays and other things you tell it to<br>
+-Tells you the weather and date
