@@ -1,0 +1,6 @@
+your_email: 
+bot_email: 
+bot_password: 
+zip_code: 
+send_time: 
+(Make sure to put a space after the colon)
