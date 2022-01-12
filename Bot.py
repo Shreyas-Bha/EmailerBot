@@ -153,13 +153,6 @@ while True:
                 birthdays_out += '-' + i + '\n'
           except KeyError:
             birthdays_out = 'None today'
-          club = ''
-          if datet.weekday() == 0:
-            club = 'Robotics at 4:30'
-          elif datet.weekday() == 3:
-            club = 'SCC after school'
-          else:
-            club = 'None today'
           day = datet.weekday()
           day = 'Monday' if day == 0 else 'Tuesday' if day == 1 else 'Wednesday' if day == 2 else 'Thursday' if day == 3 else 'Friday' if day == 4 else 'Saturday' if day == 5 else 'Sunday'
           email = """<html>
