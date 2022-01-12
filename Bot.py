@@ -74,7 +74,7 @@ while True:
                           mail_content = 'No new reminders'
                       breakable = True
                       break
-                  elif my_email in message['From']:
+                  else:
                       if message.is_multipart():
                           mail_content = ''
                           for part in message.get_payload():
@@ -133,8 +133,6 @@ while True:
                             print('That could not be removed')
                       else:    
                         reminder += '-' + mail_content + '\n'
-                      break
-                  else:
                       break
               if breakable:
                   break
