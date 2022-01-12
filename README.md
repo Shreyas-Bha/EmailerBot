@@ -17,7 +17,7 @@ zip_code is your 5 digit zip code
 
 send_time is the time you want emails to be sent
 
-
+<br>
 Bot commands:
 Sending the bot an email will send you back the same email the next time it sends an email.
 If you put cmd as the first word of your message, it won't be a reminder and instead can be used to manage birthdays
