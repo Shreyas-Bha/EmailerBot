@@ -1,6 +1,9 @@
 # EmailerBot
 A bot that emails you every morning with information.
-Instructions: Put all neccessary information in input_info.txt before running
+
+Instructions:
+
+<b>Put all neccessary information in input_info.txt before running</b>
 
 Bot commands:
 Sending the bot an email will send you back the same email the next time it sends an email.
