@@ -4,6 +4,12 @@ A bot that emails you every morning with information.
 Instructions:
 
 <b>Put all neccessary information in input_info.txt before running</b>
+Details on the information needed:
+your_email is the email that the bot will send emails to
+bot_email is the email of the bot account
+bot_password is the email of the pot account
+zip_code is your 5 digit zip code
+send_time is the time you want emails to be sent
 
 Bot commands:
 Sending the bot an email will send you back the same email the next time it sends an email.
