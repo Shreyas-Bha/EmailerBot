@@ -16,6 +16,9 @@ Details on the information needed:
 -zip_code is your 5 digit zip code
 
 -send_time is the time you want emails to be sent
+<br>
+
+In the bot's account settings, turn this setting https://www.google.com/settings/security/lesssecureapps on
 
 <br>
 Bot commands:
