@@ -1,6 +1,7 @@
 # EmailerBot
 A bot that emails you every morning with information.
 Instructions: Put all neccessary information in input_info.txt before running
+
 Bot commands:
 Sending the bot an email will send you back the same email the next time it sends an email.
 If you put cmd as the first word of your message, it won't be a reminder and instead can be used to manage birthdays
