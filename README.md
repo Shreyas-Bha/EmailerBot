@@ -11,7 +11,7 @@ your_email is the email that the bot will send emails to
 
 bot_email is the email of the bot account
 
-bot_password is the email of the pot account
+bot_password is the email of the bot account
 
 zip_code is your 5 digit zip code
 
