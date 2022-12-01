@@ -46,8 +46,9 @@ while True:
           data = '[{"name":"getSunV3LocationSearchUrlConfig","params":{"query":" + ' + zip_code + '","language":"en-US","locationType":"locale"}}]'
           response = requests.post('https://weather.com/api/v1/p/redux-dal', headers=headers, data=data)
           weather = requests.get('https://weather.com/weather/today/' + response.text.split('"placeId":["')[1].split('"')[0])
-          weather_out = weather.text.split('CurrentConditions--tempValue--3a50n">')[1].split('<')[0]
-          weather_word = str(etree.tostring(html.fromstring(weather.content))).split('CurrentConditions--phraseValue--2Z18W">')[1].split("<")[0]
+          weather = str(etree.tostring(html.fromstring(weather.content).xpath('/html/body')[0]))
+          weather_out = weather.split('CurrentConditions--tempValue')[1].split('>')[1].split('<')[0]
+          weather_word = weather.split('CurrentConditions--phraseValue')[1].split('>')[1].split("<")[0]
           #Recieving info
           reminder = ''
           mail = imaplib.IMAP4_SSL('smtp.gmail.com')
